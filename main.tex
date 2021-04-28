@@ -1,0 +1,98 @@
+\documentclass[12pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage[a4paper, width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage[page]{totalcount}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[nottoc]{tocbibind}
+% \usepackage[fit]{truncate}
+
+
+
+\newcommand{\changefont}{
+    \fontsize{9}{11}\selectfont
+}
+\pagestyle{fancy}
+\fancyhead{}
+
+\fancyhead[RE]{\changefont \leftmark}
+\fancyhead[LO]{\changefont \rightmark}
+
+\fancyfoot{}
+\fancyfoot[LO, RE]{\thepage}
+
+\renewcommand{\headrulewidth}{0.7pt}
+% \fancyhead[LO, RE]{Page \textbf{\thepage} ~of \totalpages}
+
+\graphicspath{ {images/} }
+
+\title{
+    {A Las vegas algorithm to solve Elliptic Curve Discrete Logarithm Problem in public key cryptography}\\
+    {\large Interdisciplinary School of Scientific Computing - SPPU}\\
+    \includegraphics[width=0.2\textwidth]{issc.jpg}
+}
+\author{Author Name}
+\date{Day Month Year}
+
+% \doublespacing
+\onehalfspacing
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}                             % small roman letters as page numbers
+\chapter*{Dedication}
+\input{chapters/dedication}
+
+\chapter*{Certificate of the GUIDE}
+\input{chapters/certificate_guide}
+
+\chapter*{Declaration}
+\input{chapters/declaration}
+
+\chapter*{Acknowledgement}
+\input{chapters/acknowledgement}
+
+
+% TODO : Format TOC i.e. decorate it a bit, line-spacing etc.
+\tableofcontents
+
+\listoffigures
+\pagenumbering{arabic}
+
+\listoftables
+
+% TODO : Add list of Abbreviations to TOC
+\chapter*{List of Abbreviations}
+
+\chapter{An Introduction }
+\input{chapters/chapter_1}
+
+\chapter[ECDLP]{Algorithms to solve ECDLP }
+\input{chapters/chapter_2}
+
+\chapter{The LasVegas Algorithm }
+\input{chapters/chapter_3}
+
+\chapter{Schur Complement to solve ECDLP }
+\input{chapters/chapter_4}
+
+\chapter{Extension Minor, Maximal Minor, minus-3 hypothesis  }
+\input{chapters/chapter_5}
+
+\chapter{Conclusion }
+\input{chapters/chapter_6}
+
+\chapter*{List of publications}
+
+\appendix
+\chapter{How to use the code}
+\input{chapters/appendix_A}
+
+\chapter{Something more}
+\input{chapters/appendix_B}
+
+\end{document}
