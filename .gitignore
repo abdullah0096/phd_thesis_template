@@ -9,4 +9,6 @@ main.log
 main.lot
 main.synctex.gz
 main.toc
-
+thesis_bibliography.bib
+main.run.xml
+main.bcf
