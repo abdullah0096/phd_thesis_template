@@ -8,10 +8,8 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage[nottoc]{tocbibind}
-\usepackage{biblatex}
+\usepackage[style=authoryear,sorting=none]{biblatex}
 % \usepackage[fit]{truncate}
-
-
 
 \newcommand{\changefont}{
     \fontsize{9}{11}\selectfont
@@ -31,22 +29,20 @@
 \graphicspath{{images/}}
 \addbibresource{thesis_bibliography.bib}
 
-
-\title{
-    {A Las vegas algorithm to solve Elliptic Curve Discrete Logarithm Problem in public key cryptography}\\
-    {\large Interdisciplinary School of Scientific Computing - SPPU}\\
-    \includegraphics[width=0.2\textwidth]{issc.jpg}
-}
-\author{Abdullah Ansari}
-\date{Day Month Year}
-
 % \doublespacing
 \onehalfspacing
 \begin{document}
 
-\maketitle
+\include{titlePage}
 
-\pagenumbering{roman}                             % small roman letters as page numbers
+\input{abstract}
+
+% TODO : Format TOC i.e. decorate it a bit, line-spacing etc.
+\tableofcontents
+
+\pagenumbering{arabic}
+
+% \pagenumbering{roman}                             % small roman letters as page numbers
 \chapter*{Dedication}
 \input{chapters/dedication}
 
@@ -59,13 +55,7 @@
 \chapter*{Acknowledgement}
 \input{chapters/acknowledgement}
 
-
-% TODO : Format TOC i.e. decorate it a bit, line-spacing etc.
-\tableofcontents
-
 \listoffigures
-\pagenumbering{arabic}
-
 \listoftables
 
 % TODO : Add list of Abbreviations to TOC
