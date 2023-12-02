@@ -1,2 +1,2 @@
 # phd_thesis_template
-A template for a PHD thesis.
+Template for a Ph.D. thesis.
